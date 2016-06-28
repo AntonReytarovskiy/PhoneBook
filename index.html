@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone book</title>
+    <script src="lib/bootstrap/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="phone-book">
+    <div ng-controller="phoneBookCtrl">
+        <input type="text" ng-model="query" class="form-control" placeholder="Search">
+        <pb-person ng-repeat="person in persons | filter:query" person="person">
+
+        </pb-person>
+    </div>
+</body>
+</html>
