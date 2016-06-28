@@ -2,7 +2,7 @@ var phoneBook = angular.module('phone-book',[]);
 
 phoneBook.controller('phoneBookCtrl',function ($scope,persons) {
     $scope.persons = persons.list();
-    $scope.view = 'table';
+    $scope.view = 'list';
 });
 
 phoneBook.directive('pbPerson',function () {
